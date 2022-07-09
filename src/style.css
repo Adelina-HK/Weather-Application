@@ -1,0 +1,65 @@
+body {
+  font-family: "Mukta Malar", sans-serif;
+}
+.card-body {
+  display: block;
+  background: rgb(168, 216, 234);
+  border-radius: 6px;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 4px 3px 5px rgb(224, 221, 221);
+}
+
+h0 {
+  display: block;
+  font-size: 65px;
+  margin: 0 auto;
+  color: rgb(255, 255, 210);
+  padding: 15px;
+}
+#searchingBox {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 4px 3px 5px rgb(224, 221, 221);
+}
+.pics {
+  width: 40px;
+  display: block;
+  margin: 0 auto;
+}
+.forecastDay,
+.forecastTemp {
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  color: rgb(170, 150, 218);
+}
+#actualPicTemp,
+#actualConditions {
+  display: block;
+  margin: 0 auto;
+  color: rgb(252, 186, 211);
+  font-weight: bold;
+}
+#mainPic {
+  width: 170px;
+}
+p0 {
+  margin: 0 auto;
+  font-size: 65px;
+  padding: 10px 20px;
+  position: relative;
+  top: 20px;
+  left: 17px;
+}
+#actualCity {
+  color: rgb(170, 150, 218);
+  font-size: 73px;
+}
+p1 {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}

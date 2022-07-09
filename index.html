@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -15,10 +18,10 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather_app">
-        <h0>Weather</h0>
-        <div class="container" id="searchingBox">
-          <form id="searchingForm">
+      <div class="card" style="width: 70rem;" id="searchingBox" >
+         <div class="card-body">
+            <h0>Weather</h0>
+            <form id="searchingForm">
             <input
               type="text"
               id="cityInput"
@@ -33,14 +36,18 @@
             />
           </form>
         </div>
+          <br /> 
         <div class="row">
-          <div class="col-6">
-            <img src="src/Weather Images/Sun.png" alt="sun" id="sunPic" />
+          <div class="col-8">
+            <span id="actualPicTemp">
+            <img src="src/Weather Images/Sun.png" alt="sun" id="mainPic" />
             <p0 id="actualTemperature"> 23 ℃ </p0>
+            </span>
           </div>
-          <div class="col-6">
-            <h1>Kyiv</h1>
-            <ul>
+          <br />
+          <div class="col-4">
+            <h1 id="actualCity">Kyiv</h1>
+            <ul id="actualConditions">
               <li id="currentDayTime">Saturday 13:00</li>
               <li id="currentWeather">Clear sky</li>
               <li id="humidity">Humidity: 10%</li>
@@ -48,16 +55,17 @@
             </ul>
           </div>
         </div>
+          <br />
         <div class="row">
           <div class="col-md-2">
             <div class="forecastDay">
               Sunday
             </div>
             <div class="forecastImage">
-              <img src="src/Weather Images/Cloudy.png" alt="cloudy" />
+              <img src="src/Weather Images/Sun.png" alt="sun" class="pics"/>
             </div>
             <div class="forecastTemp">
-              24° 19°
+              29° 23°
             </div>
           </div>
           <div class="col-md-2">
@@ -65,7 +73,7 @@
               Monday
             </div>
             <div class="forecastImage">
-              <img src="src/Weather Images/Sun.png" alt="sun" />
+              <img src="src/Weather Images/Sun.png" alt="sun" class="pics" />
             </div>
             <div class="forecastTemp">
               25° 20°
@@ -76,7 +84,7 @@
               Tuesday
             </div>
             <div class="forecastImage">
-              <img src="src/Weather Images/Partly cloudy.png" alt="partlyCloudy" />
+              <img src="src/Weather Images/Partly cloudy.png" alt="partlyCloudy" class="pics" />
             </div>
             <div class="forecastTemp">
               27° 21°
@@ -87,7 +95,7 @@
               Wednesday
             </div>
             <div class="forecastImage">
-              <img src="src/Weather Images/Sun.png" alt="sun" />
+              <img src="src/Weather Images/Sun.png" alt="sun" class="pics"/>
             </div>
             <div class="forecastTemp">
               28° 21°
@@ -98,7 +106,7 @@
               Thursday
             </div>
             <div class="forecastImage">
-              <img src="src/Weather Images/Rain.png" alt="rain" />
+              <img src="src/Weather Images/Rain.png" alt="rain" class="pics" />
             </div>
             <div class="forecastTemp">
               27° 22°
@@ -109,17 +117,18 @@
               Friday
             </div>
             <div class="forecastImage">
-              <img src="src/Weather Images/Sun.png" alt="sun" />
+              <img src="src/Weather Images/Sun.png" alt="sun" class="pics"/>
             </div>
             <div class="forecastTemp">
               29° 23°
             </div>
           </div>
           </div>
+         </div>
         </div>
-        <p1>This project was coded by Adelina Hetman-Kyryliuk and is <a href="https://github.com/Adelina-HK/Weather-Application">open-sourced on GitHub</a> and  <a href="https://fluffy-cobbler-4d3053.netlify.app/">hosted on Netlify</a></p1>
-
       </div>
+    </div>
+      <p1>This project was coded by Adelina Hetman-Kyryliuk and is <a href="https://github.com/Adelina-HK/Weather-Application">open-sourced on GitHub</a> and  <a href="https://fluffy-cobbler-4d3053.netlify.app/">hosted on Netlify</a></p1>
     </div>
     <script src="src/app.js"></script>
   </body>
