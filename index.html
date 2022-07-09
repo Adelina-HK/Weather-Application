@@ -15,8 +15,111 @@
   </head>
   <body>
     <div class="container">
-      <a href="" class="btn btn-primary">click</a>
-      <h1>Hello world</h1>
+      <div class="weather_app">
+        <h0>Weather</h0>
+        <div class="container" id="searchingBox">
+          <form id="searchingForm">
+            <input
+              type="text"
+              id="cityInput"
+              placeholder="Enter a city"
+              autofocus="on"
+            />
+            <input type="submit" id="searchingButton" value="Search" />
+            <input
+              type="submit"
+              id="searchingCurrentLocation"
+              value="Current location"
+            />
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <img src="src/Weather Images/Sun.png" alt="sun" id="sunPic" />
+            <p0 id="actualTemperature"> 23 ℃ </p0>
+          </div>
+          <div class="col-6">
+            <h1>Kyiv</h1>
+            <ul>
+              <li id="currentDayTime">Saturday 13:00</li>
+              <li id="currentWeather">Clear sky</li>
+              <li id="humidity">Humidity: 10%</li>
+              <li id="wind">Wind: 2 km/h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="forecastDay">
+              Sunday
+            </div>
+            <div class="forecastImage">
+              <img src="src/Weather Images/Cloudy.png" alt="cloudy" />
+            </div>
+            <div class="forecastTemp">
+              24° 19°
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="forecastDay">
+              Monday
+            </div>
+            <div class="forecastImage">
+              <img src="src/Weather Images/Sun.png" alt="sun" />
+            </div>
+            <div class="forecastTemp">
+              25° 20°
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="forecastDay">
+              Tuesday
+            </div>
+            <div class="forecastImage">
+              <img src="src/Weather Images/Partly cloudy.png" alt="partlyCloudy" />
+            </div>
+            <div class="forecastTemp">
+              27° 21°
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="forecastDay">
+              Wednesday
+            </div>
+            <div class="forecastImage">
+              <img src="src/Weather Images/Sun.png" alt="sun" />
+            </div>
+            <div class="forecastTemp">
+              28° 21°
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="forecastDay">
+              Thursday
+            </div>
+            <div class="forecastImage">
+              <img src="src/Weather Images/Rain.png" alt="rain" />
+            </div>
+            <div class="forecastTemp">
+              27° 22°
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="forecastDay">
+              Friday
+            </div>
+            <div class="forecastImage">
+              <img src="src/Weather Images/Sun.png" alt="sun" />
+            </div>
+            <div class="forecastTemp">
+              29° 23°
+            </div>
+          </div>
+          </div>
+        </div>
+        <p1>This project was coded by Adelina Hetman-Kyryliuk and is <a href="https://github.com/Adelina-HK/Weather-Application">open-sourced on GitHub</a> and  <a href="https://fluffy-cobbler-4d3053.netlify.app/">hosted on Netlify</a></p1>
+
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
