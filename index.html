@@ -14,6 +14,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather Application</title>
   </head>
   <body>
@@ -41,18 +42,18 @@
           <div class="col-5">
             <span id="actualPicTemp">
             <img src="src/Weather Images/Sun.png" alt="sun" id="mainPic" />
-            <p0 id="actualTemperature">23</p0><span class="units">℃|<a href="#">°F</a>  </span>
+            <p0 id="actualTemperature"></p0><span class="units">℃|<a href="#">°F</a>  </span>
             </span>
           </div>
           <br />
           
           <div class="col-3">
             <div class="container">
-            <h1 id="actualCity">Kyiv</h1>
+            <h1 id="actualCity"></h1>
             </div>
           </div>
             <div class="col-4">
-            <div class="container" id="actualCond">     
+            <div class="container" id="actualConditions">     
               <ul>
               <li id="currentDayTime"><strong>Saturday 13:00</strong></li>
               <li id="currentWeather">Clear sky</li>

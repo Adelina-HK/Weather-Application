@@ -36,7 +36,7 @@ h0 {
   color: rgb(170, 150, 218);
 }
 #actualPicTemp,
-#actualCond {
+#actualConditions {
   display: block;
   margin: 0 auto;
   color: rgb(252, 186, 211);
@@ -59,7 +59,7 @@ p0 {
 }
 .units {
   position: relative;
-  top: -12px;
+  top: -1px;
 }
 #actualCity {
   color: rgb(170, 150, 218);
@@ -75,7 +75,7 @@ ul {
   list-style: none;
 }
 #actualCity,
-#actualCond {
+#actualConditions {
   position: relative;
   top: 30px;
 }
