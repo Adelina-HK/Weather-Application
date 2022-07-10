@@ -59,11 +59,12 @@ p0 {
 }
 .units {
   position: relative;
-  top: -1px;
+  top: -13px;
 }
 #actualCity {
   color: rgb(170, 150, 218);
-  font-size: 73px;
+  font-size: 80px;
+  font-weight: 700;
 }
 p1 {
   display: block;
@@ -77,7 +78,7 @@ ul {
 #actualCity,
 #actualConditions {
   position: relative;
-  top: 30px;
+  top: 26px;
 }
 #searchingButton,
 #searchingCurrentLocation {
