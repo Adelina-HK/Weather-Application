@@ -57,6 +57,10 @@ p0 {
   top: 20px;
   left: 17px;
 }
+.units {
+  position: relative;
+  top: -12px;
+}
 #actualCity {
   color: rgb(170, 150, 218);
   font-size: 73px;
