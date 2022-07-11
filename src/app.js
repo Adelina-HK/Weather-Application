@@ -42,6 +42,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  mainPicElement.setAttribute("alt", response.data.weather[0].main);
 }
 let inputCity = "Kyiv";
 let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
