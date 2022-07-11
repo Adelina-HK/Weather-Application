@@ -37,6 +37,11 @@ function displayTemperature(response) {
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   let currentDayTimeElement = document.querySelector("#currentDayTime");
   currentDayTimeElement.innerHTML = formatDate();
+  let mainPicElement = document.querySelector("#mainPic");
+  mainPicElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 let inputCity = "Kyiv";
 let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
