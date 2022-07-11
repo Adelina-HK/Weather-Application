@@ -1,6 +1,7 @@
 function formatDate(timestamp) {
+  console.log(timestamp);
   let date = new Date(timestamp);
-  let hours = data.getHours();
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -37,7 +38,8 @@ function displayTemperature(response) {
   let currentDayTimeElement = document.querySelector("#currentDayTime");
   currentDayTimeElement.innerHTML = formatDate(response.data.dt * 1000);
 }
+let inputCity = "Kyiv";
 let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
