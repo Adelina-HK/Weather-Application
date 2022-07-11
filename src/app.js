@@ -1,6 +1,6 @@
-function formatDate(timestamp) {
-  console.log(timestamp);
-  let date = new Date(timestamp);
+function formatDate() {
+  console.log();
+  let date = new Date();
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -36,7 +36,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   let currentDayTimeElement = document.querySelector("#currentDayTime");
-  currentDayTimeElement.innerHTML = formatDate(response.data.dt * 1000);
+  currentDayTimeElement.innerHTML = formatDate();
 }
 let inputCity = "Kyiv";
 let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
