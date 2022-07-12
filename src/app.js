@@ -73,15 +73,16 @@ function displayFahreinheitTemperature(event) {
 let fahreinheitLink = document.querySelector("#fahreinheit-link");
 fahreinheitLink.addEventListener("click", displayFahreinheitTemperature);
 
-let celsiusTemperature=null;
-
 function displayCelsiusTemperature(event){
   event.preventDefault();
   let actualTemperatureElement = document.querySelector("#actualTemperature");
-  actualTemperatureElement=Math.round(celsiusTemperature);
+actualTemperatureElement.innerHTML=Math.round(celsiusTemperature);
 }
-
-let celsiusLink = document.querySelector("#celcius-link");
+let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
+let celsiusTemperature=null;
+
 
 search("Kyiv");

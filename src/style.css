@@ -51,7 +51,7 @@ h0 {
 }
 p0 {
   margin: 0 auto;
-  font-size: 65px;
+  font-size: 55px;
   padding: 10px 20px;
   position: relative;
   top: 20px;
@@ -63,7 +63,7 @@ p0 {
 }
 #actualCity {
   color: rgb(170, 150, 218);
-  font-size: 80px;
+  font-size: 65px;
   font-weight: 700;
 }
 p1 {
@@ -78,7 +78,7 @@ ul {
 #actualCity,
 #actualConditions {
   position: relative;
-  top: 26px;
+  top: 34px;
 }
 #searchingButton,
 #searchingCurrentLocation {
