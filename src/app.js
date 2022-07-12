@@ -25,8 +25,9 @@ function formatDate() {
 function displayTemperature(response) {
   console.log(response.data.main.temp);
   console.log(response.data);
+  celsiusTemperature = response.data.main.temp;
   let actualTemperatureElement = document.querySelector("#actualTemperature");
-  actualTemperatureElement.innerHTML = Math.round(response.data.main.temp);
+  actualTemperatureElement.innerHTML = Math.round(celsiusTemperature);
   let actualCityElement = document.querySelector("#actualCity");
   actualCityElement.innerHTML = response.data.name;
   let currentWeatherElement = document.querySelector("#currentWeather");
@@ -57,7 +58,30 @@ function submitCity(event) {
   let cityInputElement = document.querySelector("#cityInput");
   search(cityInputElement.value);
 }
-search("Kyiv");
+
 
 let searchingFormElement = document.querySelector("#searchingForm");
 searchingFormElement.addEventListener("submit", submitCity);
+
+function displayFahreinheitTemperature(event) {
+  event.preventDefault();
+  let fahreinheitTemp = (celsiusTemperature * 1.8 + 32);
+
+  let actualTemperatureElement = document.querySelector("#actualTemperature");
+  actualTemperatureElement.innerHTML = Math.round(fahreinheitTemp);
+}
+let fahreinheitLink = document.querySelector("#fahreinheit-link");
+fahreinheitLink.addEventListener("click", displayFahreinheitTemperature);
+
+let celsiusTemperature=null;
+
+function displayCelsiusTemperature(event){
+  event.preventDefault();
+  let actualTemperatureElement = document.querySelector("#actualTemperature");
+  actualTemperatureElement=Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celcius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Kyiv");
