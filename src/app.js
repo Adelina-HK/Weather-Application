@@ -23,8 +23,6 @@ function formatDate() {
 }
 
 function displayTemperature(response) {
-  console.log(response.data.main.temp);
-  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   let actualTemperatureElement = document.querySelector("#actualTemperature");
   actualTemperatureElement.innerHTML = Math.round(celsiusTemperature);
