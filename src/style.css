@@ -61,6 +61,15 @@ p0 {
   position: relative;
   top: -13px;
 }
+#celsius-link,
+#fahreinheit-link {
+  color: rgb(252, 186, 211);
+  text-decoration: none;
+}
+(#celsius-link,
+#fahreinheit-link) :hover {
+  text-decoration: underline;
+}
 #actualCity {
   color: rgb(170, 150, 218);
   font-size: 65px;
