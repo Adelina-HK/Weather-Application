@@ -63,12 +63,17 @@ p0 {
 }
 #celsius-link,
 #fahreinheit-link {
-  color: rgb(252, 186, 211);
   text-decoration: none;
 }
-(#celsius-link,
-#fahreinheit-link) :hover {
-  text-decoration: underline;
+
+.activeLink {
+  cursor: default;
+  text-decoration: none;
+  color: rgb(252, 186, 211);
+}
+.activeLink:hover{
+ text-decoration: none; 
+ color: rgb(252, 186, 211);
 }
 #actualCity {
   color: rgb(170, 150, 218);

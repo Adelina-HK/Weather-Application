@@ -66,7 +66,8 @@ searchingFormElement.addEventListener("submit", submitCity);
 function displayFahreinheitTemperature(event) {
   event.preventDefault();
   let fahreinheitTemp = (celsiusTemperature * 1.8 + 32);
-
+celsiusLink.classList.remove("activeLink");
+fahreinheitLink.classList.add("activeLink");
   let actualTemperatureElement = document.querySelector("#actualTemperature");
   actualTemperatureElement.innerHTML = Math.round(fahreinheitTemp);
 }
@@ -75,6 +76,9 @@ fahreinheitLink.addEventListener("click", displayFahreinheitTemperature);
 
 function displayCelsiusTemperature(event){
   event.preventDefault();
+celsiusLink.classList.add("activeLink");
+fahreinheitLink.classList.remove("activeLink");
+
   let actualTemperatureElement = document.querySelector("#actualTemperature");
 actualTemperatureElement.innerHTML=Math.round(celsiusTemperature);
 }
