@@ -22,36 +22,60 @@ function formatDate() {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast(response){
-  console.log(response.data.daily);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
-  let days=["Saturday","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
-  let forecastHTML=`<div class="row">`;
-  days.forEach(function (day){
-    forecastHTML=forecastHTML+`<div class="col-md-2">
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if(index<6){
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-md-2">
             <div class="forecastDay">
-              ${day}
+              ${formatDay(forecastDay.dt)}
             </div>
             <div class="forecastImage">
-              <img src="src/Weather Images/Sun.png" alt="sun" class="pics"/>
+              <img src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" alt="" class="pics"/>
             </div>
             <div class="forecastTemp">
-              <span class="forecastTempMax"><strong>29°</strong></span>
-              <span class="forecastTempMin">23°</span> 
+              <span class="forecastTempMax"><strong>${Math.round(
+                forecastDay.temp.max
+              )}°</strong></span>
+              <span class="forecastTempMin">${Math.round(
+                forecastDay.temp.min
+              )}°</span> 
             </div>
             </div>`;
+              }
   });
-  forecastHTML=forecastHTML+`</div`;
-  forecastElement.innerHTML=forecastHTML;
-
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
 }
-function getForecast(coordinates){
+function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  
-console.log(apiUrl);
-axios.get(apiUrl).then(displayForecast);
+
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -90,34 +114,31 @@ function submitCity(event) {
   search(cityInputElement.value);
 }
 
-
 let searchingFormElement = document.querySelector("#searchingForm");
 searchingFormElement.addEventListener("submit", submitCity);
 
 function displayFahreinheitTemperature(event) {
   event.preventDefault();
-  let fahreinheitTemp = (celsiusTemperature * 1.8 + 32);
-celsiusLink.classList.remove("activeLink");
-fahreinheitLink.classList.add("activeLink");
+  let fahreinheitTemp = celsiusTemperature * 1.8 + 32;
+  celsiusLink.classList.remove("activeLink");
+  fahreinheitLink.classList.add("activeLink");
   let actualTemperatureElement = document.querySelector("#actualTemperature");
   actualTemperatureElement.innerHTML = Math.round(fahreinheitTemp);
 }
 let fahreinheitLink = document.querySelector("#fahreinheit-link");
 fahreinheitLink.addEventListener("click", displayFahreinheitTemperature);
 
-function displayCelsiusTemperature(event){
+function displayCelsiusTemperature(event) {
   event.preventDefault();
-celsiusLink.classList.add("activeLink");
-fahreinheitLink.classList.remove("activeLink");
+  celsiusLink.classList.add("activeLink");
+  fahreinheitLink.classList.remove("activeLink");
 
   let actualTemperatureElement = document.querySelector("#actualTemperature");
-actualTemperatureElement.innerHTML=Math.round(celsiusTemperature);
+  actualTemperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-
-let celsiusTemperature=null;
-
+let celsiusTemperature = null;
 
 search("Kyiv");
