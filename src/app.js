@@ -89,7 +89,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} m/h`;
   let currentDayTimeElement = document.querySelector("#currentDayTime");
   currentDayTimeElement.innerHTML = formatDate();
   let mainPicElement = document.querySelector("#mainPic");
