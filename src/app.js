@@ -1,5 +1,5 @@
 function formatDate() {
-  console.log();
+  
   let date = new Date();
   let hours = date.getHours();
   if (hours < 10) {
@@ -70,16 +70,15 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
   celsiusTemperature = response.data.main.temp;
+
   let actualTemperatureElement = document.querySelector("#actualTemperature");
   actualTemperatureElement.innerHTML = Math.round(celsiusTemperature);
   let actualCityElement = document.querySelector("#actualCity");
@@ -99,6 +98,8 @@ function displayTemperature(response) {
   );
   mainPicElement.setAttribute("alt", response.data.weather[0].main);
   getForecast(response.data.coord);
+  celsiusLink.classList.add("activeLink");
+  fahreinheitLink.classList.remove("activeLink");
 }
 
 function search(city) {
