@@ -19,7 +19,7 @@ h0 {
 }
 #searchingBox {
   display: block;
-  margin: 0 auto;
+  margin: 0px auto;
   padding: 20px;
   box-shadow: 4px 3px 5px rgb(224, 221, 221);
 }
@@ -31,9 +31,11 @@ h0 {
 .forecastDay,
 .forecastTemp {
   text-align: center;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: bold;
-  color: rgb(170, 150, 218);
+  color: rgb(170, 150, 218);}
+  .forecastDay{
+background-color: #ffffd2;
 }
 #actualPicTemp,
 #actualConditions {
@@ -89,11 +91,7 @@ p1 {
 ul {
   list-style: none;
 }
-#actualCity,
-#actualConditions {
-  position: relative;
-  top: 35px;
-}
+
 #searchingButton {
   border-radius: 2px;
   box-shadow: 2px 3px 5px rgb(224, 221, 221);
@@ -116,3 +114,45 @@ ul {
 }
 
 .forecastTempMin{opacity: 0.75;}
+
+@media(max-width:998px){
+
+#mainPic {width: 70px; margin: 0 auto;
+}
+
+#actualCity {display: flex; 
+  justify-content: flex-start;
+  font-size: 27px;
+  margin: 0 auto;}
+  
+#actualConditions{ position: relative; 
+  margin: 0 auto;
+  margin-bottom: 15px;
+ }
+#currentDayTime{font-size: 20px;}
+
+#actualTemperature {
+  font-size: 27px;
+  margin: 0 auto;
+  }
+
+.units{
+  font-size: 12px;
+}  
+
+h0 {font-size: 45px;
+font-weight: 600;}
+
+.forecastDay{
+  display: inline;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.col-sm-2 {display: flex; 
+  justify-content:space-evenly;
+}
+
+#actualConditions{display: flex;
+  justify-content: flex-start;}
+}

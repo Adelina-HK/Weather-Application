@@ -1,5 +1,4 @@
 function formatDate() {
-  
   let date = new Date();
   let hours = date.getHours();
   if (hours < 10) {
@@ -43,11 +42,11 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if(index<6){
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-md-2">
-            <div class="forecastDay">
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-sm-2">
+            <div class="forecastDay container-fluid">
               ${formatDay(forecastDay.dt)}
             </div>
             <div class="forecastImage">
@@ -55,7 +54,7 @@ function displayForecast(response) {
                 forecastDay.weather[0].icon
               }@2x.png" alt="" class="pics"/>
             </div>
-            <div class="forecastTemp">
+            <div class="container forecastTemp">
               <span class="forecastTempMax"><strong>${Math.round(
                 forecastDay.temp.max
               )}°</strong></span>
@@ -64,7 +63,7 @@ function displayForecast(response) {
               )}°</span> 
             </div>
             </div>`;
-              }
+    }
   });
   forecastHTML = forecastHTML + `</div`;
   forecastElement.innerHTML = forecastHTML;

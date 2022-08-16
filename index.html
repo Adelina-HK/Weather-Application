@@ -22,10 +22,10 @@
   </head>
   <body>
     <div class="container">
-      <div class="card" style="width: 70rem" id="searchingBox">
+      <div class="card container-fluid" id="searchingBox">
         <div class="card-body">
-          <h0>Weather</h0>
-          <form id="searchingForm">
+          <h0 class="weatherTitle">Weather</h0>
+          <form id="searchingForm" class="container-fluid">
             <input
               type="text"
               id="cityInput"
@@ -38,9 +38,11 @@
         </div>
         <br />
         <div class="row">
-          <div class="col-5">
-            <span id="actualPicTemp">
-              <img src="" alt="" id="mainPic" />
+          <div
+            class="col-sm-5 container"
+          >
+            <span id="actualPicTemp" class="container-fluid mt-sm-2">
+              <img src="" alt="" id="mainPic"/>
               <p0 id="actualTemperature"></p0
               ><span class="units"
                 ><a href="#" class="activeLink" id="celsius-link">℃</a> |
@@ -50,13 +52,13 @@
           </div>
           <br />
 
-          <div class="col-3">
-            <div class="container">
-              <h1 id="actualCity"></h1>
+          <div class="col-sm-3 mt-sm-3">
+            <div class="container-fluid mt-sm-3">
+              <h1 id="actualCity" class="container-fluid p-sm-2"></h1>
             </div>
           </div>
-          <div class="col-4">
-            <div class="container" id="actualConditions">
+          <div class="col-sm-4">
+            <div class="container-fluid mt-sm-4" id="actualConditions">
               <ul>
                 <li id="currentDayTime"><strong></strong></li>
                 <li id="currentWeather"></li>
@@ -67,12 +69,12 @@
           </div>
         </div>
         <br />
-        <div class="weather-forecast" id="forecast">
+        <div class="weather-forecast container-fluid" id="forecast">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-sm-2">
               <div class="forecastDay"></div>
               <div class="forecastImage">
-                <img src="" alt="" class="pics" />
+                <img src="" alt="" class="img-fluid pics" />
               </div>
               <div class="forecastTemp">
                 <span class="forecastTempMax"><strong>°</strong></span>
