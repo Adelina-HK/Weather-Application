@@ -34,19 +34,20 @@ h0 {
   font-size: 17px;
   font-weight: bold;
   color: rgb(170, 150, 218);}
-  .forecastDay{
-background-color: #ffffd2;
+.forecastDay{
+background-color: #ffffd2; 
 }
 #actualPicTemp,
-#actualConditions {
-  display: block;
-  margin: 0 auto;
+#actualConditions {text-align: center; 
   color: rgb(252, 186, 211);
   font-weight: bold;
+  line-height: 0.75;
 }
-#currentDayTime {
-  font-size: larger;
+ #currentDayTime {
+  margin-bottom:18px;
+  font-size: 30px;
   text-decoration: underline;
+  color: rgb(170, 150, 218);
 }
 #mainPic {
   width: 150px;
@@ -82,14 +83,10 @@ p0 {
   font-size: 55px;
   font-weight: 700;
 }
-p1 {
-  display: block;
+p1 {display: block;
   margin: 0 auto;
-  padding: 10px;
+  padding: 25px;
   text-align: center;
-}
-ul {
-  list-style: none;
 }
 
 #searchingButton {
@@ -115,21 +112,19 @@ ul {
 
 .forecastTempMin{opacity: 0.75;}
 
-@media(max-width:998px){
+@media (min-width: 280px) and (max-width:1000px){
 
 #mainPic {width: 70px; margin: 0 auto;
 }
+#actualPicTemp{text-align: center; }
 
-#actualCity {display: flex; 
-  justify-content: flex-start;
+#actualCity {text-align: center;
   font-size: 27px;
-  margin: 0 auto;}
-  
-#actualConditions{ position: relative; 
-  margin: 0 auto;
-  margin-bottom: 15px;
- }
-#currentDayTime{font-size: 20px;}
+  }
+
+#currentDayTime { text-align: center;
+  font-size: 20px;
+}
 
 #actualTemperature {
   font-size: 27px;
@@ -144,15 +139,14 @@ h0 {font-size: 45px;
 font-weight: 600;}
 
 .forecastDay{
-  display: inline;
-  text-align: left;
+  display: block;
+  text-align: center;
   margin-bottom: 10px;
   font-size: 16px;
 }
-.col-sm-2 {display: flex; 
-  justify-content:space-evenly;
-}
 
-#actualConditions{display: flex;
-  justify-content: flex-start;}
+.col-sm-2 {display: inline;
+}
+div .forecastTemp {opacity: 100%;}
+
 }
